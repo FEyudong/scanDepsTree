@@ -2,6 +2,12 @@
   "name": "scan-dep-tree",
   "version": "0.0.1",
   "description": "扫描项目依赖，构建项目依赖树",
+  "homepage": "https://github.com/FEyudong/scanDepsTree",
+  "keywords": [ 
+    "node-dependencies-tree",
+    "esmodule",
+    "depsTree"
+  ],
   "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -15,8 +21,7 @@
   },
   "scripts": {
     "build": "rimraf dist && rollup --config rollup.config.ts --bundleConfigAsCjs --configPlugin typescript",
-    "dev": "npm run build -- --watch",
-    "arthur": "echo 1"
+    "dev": "npm run build -- --watch"
   },
   "author": "",
   "license": "ISC",
@@ -24,8 +29,7 @@
     "@babel/parser": "^7.19.4",
     "@babel/traverse": "^7.19.4",
     "@babel/types": "^7.19.4",
-    "@vue/compiler-sfc": "^3.2.41",
-    "commander": "^9.4.1"
+    "@vue/compiler-sfc": "^3.2.41"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.0",
@@ -39,5 +43,8 @@
     "rollup": "^3.2.3",
     "rollup-plugin-typescript2": "^0.34.1",
     "tslib": "^2.4.1"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
   }
 }
