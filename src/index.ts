@@ -11,6 +11,8 @@ import { Config } from "./types/config";
 let config_: Config = null;
 /**
  * 扫描依赖的入口函数
+ * @param entry 扫描入口路径
+ * @param config 配置选项
  * @returns DepTree
  */
 export default function main(entry:string, config: Config): DepTree {

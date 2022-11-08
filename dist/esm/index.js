@@ -15,6 +15,8 @@ const isNpmPath = (path) => bareModuleRE.test(path);
 let config_ = null;
 /**
  * 扫描依赖的入口函数
+ * @param entry 扫描入口路径
+ * @param config 配置选项
  * @returns DepTree
  */
 function main(entry, config) {
