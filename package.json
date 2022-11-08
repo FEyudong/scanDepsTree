@@ -1,0 +1,43 @@
+{
+  "name": "scan-dep-tree",
+  "version": "0.0.1",
+  "description": "扫描项目依赖，构建项目依赖树",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "bin": {
+    "scan": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "rimraf dist && rollup --config rollup.config.ts --bundleConfigAsCjs --configPlugin typescript",
+    "dev": "npm run build -- --watch",
+    "arthur": "echo 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/parser": "^7.19.4",
+    "@babel/traverse": "^7.19.4",
+    "@babel/types": "^7.19.4",
+    "@vue/compiler-sfc": "^3.2.41",
+    "commander": "^9.4.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.0",
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-json": "^5.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^9.0.1",
+    "@types/babel-traverse": "^6.25.7",
+    "@types/node": "^18.11.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.2.3",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "tslib": "^2.4.1"
+  }
+}
